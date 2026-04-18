@@ -1,0 +1,25 @@
+{
+  "name": "ferretrack-selenium-tests",
+  "version": "1.0.0",
+  "description": "Pruebas automatizadas con Selenium para FerreTrack - Proyecto Final Programación III",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*.test.js --timeout 30000 --reporter mochawesome --reporter-options reportDir=reports,reportFilename=report,charts=true,inline=true",
+    "test:run": "mocha tests/**/*.test.js --timeout 30000 --reporter spec",
+    "test:hu1": "mocha tests/hu001_dashboard.test.js --timeout 30000 --reporter spec",
+    "test:hu2": "mocha tests/hu002_crear_producto.test.js --timeout 30000 --reporter spec",
+    "test:hu3": "mocha tests/hu003_buscar_producto.test.js --timeout 30000 --reporter spec",
+    "test:hu4": "mocha tests/hu004_eliminar_producto.test.js --timeout 30000 --reporter spec",
+    "test:hu5": "mocha tests/hu005_crear_venta.test.js --timeout 30000 --reporter spec",
+    "test:hu6": "mocha tests/hu006_reporte_ventas.test.js --timeout 30000 --reporter spec"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.18.1"
+  },
+  "devDependencies": {
+    "mocha": "^10.4.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
